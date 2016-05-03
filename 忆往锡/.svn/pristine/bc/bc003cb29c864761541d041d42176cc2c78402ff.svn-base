@@ -1,0 +1,76 @@
+ html,body{
+ 	height: 100%;
+ 	width: 100%;
+ 	background-color: rgba(0,0,0,0.2);
+ }
+ .main2{
+	 /*width: 80%;*/
+	 margin-right: 10%;
+	 margin-left: 10%;
+	 margin-top: 10%;
+	 float: left;
+	 position: absolute;
+ }
+ .share{
+	 width:10%;
+	/* height: 10%;*/
+	 /*border: 2px solid red;*/
+	 margin-left: 20%;
+	 margin-top: 135%;
+	 float: left;
+	 position: absolute;
+     z-index: 3;
+
+ }
+
+ .otherShare{
+     width:0;
+     /*margin-right: 30%;*/
+     margin-left: 30%;
+     margin-top: 80%;
+     float: left;
+     position: absolute;
+     z-index: 4;
+     opacity: 0;
+
+ }
+
+ .close{
+	 width:14%;
+	 margin-left: 43%;
+	 margin-top: 134%;
+ }
+ .edit{
+	 margin-left: 70%;
+     z-index: 3;
+ }
+ .photo{
+	 margin-right: 15%;
+	 margin-left: 15%;
+	 margin-top: 20%;
+	 float: left;
+	 position: absolute;
+ }
+
+
+/* #guColEnd{
+	 opacity: 1;
+     width:10%;
+     /!* height: 10%;*!/
+     /!*border: 2px solid red;*!/
+     margin-left: 70%;
+     margin-top: 135%;
+     float: left;
+     position: absolute;
+     z-index: 3;
+ }*/
+ /*#guCol{
+     z-index: 3;
+ }*/
+
+ /*
+ .favorite{
+     opacity: 1;
+     z-index: 2;
+     /!*z-index: 2;*!/
+ } */

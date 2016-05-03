@@ -1,0 +1,68 @@
+<!doctype html> 
+<html>
+	<head>
+		<meta charset="utf-8">
+	   <!--  <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,initial-scale=1.0,width=device-width"/> -->
+		<meta name="format-detection" content="telephone=no,email=no,date=no,address=no">
+		<title>Hello APP</title>
+		<link rel="stylesheet" type="text/css" href="./css/api.css" />
+		<link rel="stylesheet" type="text/css" href="./css/main.css"/>
+		<link rel="stylesheet" type="text/css" href="./css/frame2.css"/>
+		<script type="text/javascript" src="./script/jquery.min.js"></script>
+		<script type="text/javascript" src="./script/api.js"></script>
+
+	</head>
+	<body>
+		<div id = "leadPic">
+			<img src="./image/lead.jpg" style = "width:100%;height:100%" >
+		</div>
+
+		<div id="newBg">
+			<img  src="./image/map.jpg" style="width:100%; height:100%;">
+		</div>
+		<div id="logo">
+			<img src="./image/1.png" style="width:30%; height:30%;">
+		</div>
+
+		<!--这里把图片fadeout出去~~-->
+		<div id ="skip">
+			<button onClick="changeNewPic()"></button>
+		</div>
+
+		<script type="text/javascript" src="./script/main.js"></script>
+		<script type="text/javascript">
+
+			/*apiready = function() {*/
+				/*在打开另一个框架时，前面如果已经打开了一个框架，则会关闭之前的框架*/
+				$api.setStorage('gu1','0');
+				setTimeout("changeNewPic()",3000);
+				setTimeout("funApi()",7000);
+
+				/*$api.setStorage('gu1','0');*/
+				function funApi(){
+					/*alert(1);*/
+					api.openWin({
+						name:'menu',
+						url:'./html/frame1.html',
+						hScrollBarEnabled:false,
+						vScrollBarEnabled:false,
+						scaleEnabled:false,
+						rect:{
+							x:0,
+							y:0,
+							w:api.winWidth,
+							h:api.winHeight
+						}
+					});
+				/*}*/
+
+			}
+			function changeNewPic(){
+				/*alert(1);*/
+				$("#newBg").fadeIn(1000);
+				$("#logo").fadeIn(1000);
+			}
+		</script>
+	</body>
+
+</html>

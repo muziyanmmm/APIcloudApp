@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>  
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="maximum-scale=1.0,minimum-scale=1.0,user-scalable=0,width=device-width,initial-scale=1.0"/>
+        <!-- <link href="../css/musicstyle.css" rel="stylesheet"> -->
+        <link rel="stylesheet" type="text/css" href="../css/main.css"/>
+        <script type="text/javascript" src="../script/jquery.min.js"></script>
+        <script type="text/javascript" src="../script/api.js"></script>
+    </head>
+    <body>
+        <div id="header">
+            <div id="music">
+                <a id="audioBtn"><img id="change_img" src="../image/music.png" style="width:100%; height:100%;" ></a>
+            </div>
+            <div id="camera">
+                <img src="../image/camare.png" style="width:100%; height:100%;" >
+            </div>
+            <div id="menu">
+                <img src="../image/menu.png" style="width:100%; height:100%;" >
+            </div>
+        </div>
+
+
+        <!--/*music*/-->
+        <!--！！！！！！！！！！！！！！！！！！！！！！！！！-->
+       <audio hidden loop="true" src="../image/music.mp3" id="bgMusic"  autoplay="autoplay"></audio> 
+
+
+
+
+        <div class = "main">
+            <div id = "bgpic">
+                <img id = "waitChange" src="../image/map.jpg" style = "width:100%; height:100%;" >
+
+
+            </div>
+            <div id = "bg2">
+                <img src = "../image/mapA.png" style = "width:100%; height:100%; " >
+                <!--<div id = "ancFir">1111</div>-->
+            </div>
+
+            <!-- 锚点，地图打开时的 -->
+            <div id = "ancFir">0000</div>
+            <div class="wrong">
+                <div class="guPic">
+                    <img id="guStr" src="../image/mapIcon.png" style = "width:65%; height:65%; ">
+                </div>
+                <div class="chenPic">
+                    <img id="chenStr" src="../image/mapIcon.png" style = "width:65%; height:65%; ">
+                </div>
+                <div class="luPic">
+                    <img id="luStr" src="../image/mapIcon.png" style = "width:65%; height:65%; ">
+                </div>
+                <div class="qinqiPic">
+                    <img id="qinqiStr" src="../image/mapIcon.png" style = "width:65%; height:65%; ">
+                </div>
+                <div class="wenPic">
+                    <img id="wenStr" src="../image/mapIcon.png" style = "width:65%; height:65%; ">
+                </div>
+                <div class="shuPic">
+                    <img id="shuStr" src="../image/mapIcon.png" style = "width:65%; height:65%; ">
+                </div>
+                <div class="qinPic">
+                    <img id="qinStr" src="../image/mapIcon.png" style = "width:65%; height:65%; ">
+                </div>
+                <div class="xuePic">
+                    <img id="xueStr" src="../image/mapIcon.png" style = "width:65%; height:65%; ">
+                </div>
+                <div class="xuehuaPic">
+                    <img id="xuehuaStr" src="../image/mapIcon.png" style = "width:65%; height:65%; ">
+                </div>
+                <div class="qianPic">
+                    <img id="qianStr" src="../image/mapIcon.png" style = "width:65%; height:65%; ">
+                </div>
+                <div class="zhangPic">
+                    <img id="zhangStr" src="../image/mapIcon.png" style = "width:65%; height:65%; ">
+                </div>
+                <div class="liaoPic">
+                    <img id="liaoStr" src="../image/mapIcon.png" style = "width:65%; height:65%; ">
+                </div>
+            </div>
+
+
+        </div>
+
+        <div id="footer">
+            <div id="map">
+                <img id="map1" src="../image/map.png" style="width:270%; height:270%;" >
+            </div>
+            <div id="home">
+                <img id="home1" src="../image/home2.png" style="width:270%; height:270%;" >
+            </div>
+            <div id="user">
+                <img id="user1" src="../image/user.png" style="width:270%; height:270%;" >
+            </div>
+        </div>
+
+
+
+        <script type="text/javascript" src="../script/main.js"></script>
+        <script type="text/javascript">
+            var music = document.getElementById("bgMusic");
+            $("#audioBtn").click(function(){
+
+
+                var pic = document.getElementById("change_img");
+
+                if(music.paused){
+                    music.play();
+                    pic.setAttribute("src","../image/music.png");
+                    $("#audioBtn").removeClass("pause").addClass("play");
+
+                }else{
+                    music.pause();
+                    pic.setAttribute("src","../image/menu.png");
+                    $("#audioBtn").removeClass("play").addClass("pause");
+                }
+            });
+			/*$("#mapGu").click(function(){
+				/!*this.blur();*!/
+				alert(1);
+			});*/
+        </script>
+    </body>
+
+</html>
